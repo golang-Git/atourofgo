@@ -4,17 +4,31 @@
 ※日本語など大文字と小文字の区別がない言語で記述された場合は、小文字と同じ扱いになる
 
 #気になったこと
-
-
 Creating a slice with makeの中で
 スライスをmakeで作っているが、
 a := make([]int, 5)
 var a [5]int
 は同じ意味なのかどうか
+⇒同じ意味。makeはMapの生成などがメインの利用方法
 
+#資料
+同時配信のプログラム: https://gh.iiji.jp/Fujin (with 工藤さん)
+動画関連のプログラム: https://gh.iiji.jp/ozaki/mpegts
+readerのサンプルソース：https://drive.google.com/open?id=1euUaImm-0ragvn9c_7QrxysQw3QjtgS4
+readerの参考：https://qiita.com/mztnnrt/items/ddf6920a484e74f0ee1a
+a tour of go演習問題：https://qiita.com/hkuno/items/28cef21ffe5c09259367
+ioとfile：http://cuto.unirita.co.jp/gostudy/post/standard-library-file-io/
 
 
 Appending to a sliceをローカルで実行すると
 a tour of goで実行したときと結果が違った
 
 https://play.golang.org/p/q_QHAO6JI7N
+
+
+＃やること
+CLI
+ファイルの読み書き
+webのいろいろ
+上記3つのテーマから自分で考えて作ってみる何にするかは自由
+（作成期間：一月のどこかの一週間）

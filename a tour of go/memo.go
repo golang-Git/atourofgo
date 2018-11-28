@@ -2,25 +2,16 @@ package main
 
 import "fmt"
 
-func returnFunc() func() {
-	return func() {
-		fmt.Println("I'm a function")
-	}
-}
-
-func callFunction(f func()) {
-	f()
-}
+//switch文を利用した型アサーションの方法
 
 func main() {
-	returnFunc()()
-	f := returnFunc()
-	f()
-	/*
-		callFunction(func() {
-			fmt.Println("Hello World!")
-		})
-	*/
-	fmt.Printf("returnFunc=%T f=%T\n", returnFunc, f)
-	callFunction(returnFunc())
+	var v interface{} = 3
+
+	switch s := v.(type) {
+	case string, uint:
+		//上記のようにcase文の中には複数の型を記述することができるが、その場合はcaseの中で計算などはできない
+		//型が明確に定まる場合は、変数sを「その型そのものの変数」として利用できるが、複数の型を列挙したパターンでは変数vの型が1つに定まらない
+	case int:
+		fmt.Println("int", s)
+	}
 }

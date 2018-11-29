@@ -18,6 +18,11 @@ func main() {
 func Answer() [][]int {
 	// 😤
 	xy := make([][]int, 9)
-
+	for i := 1; i < 10; i++ {
+		xy[i-1] = make([]int, 9)
+		for j := 1; j < 10; j++ {
+			xy[i-1][j-1] = (i * j)
+		}
+	}
 	return xy
 }

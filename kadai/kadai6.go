@@ -32,13 +32,23 @@ import (
 */
 
 func main() {
-	arr := []int{2, 4, 5, 1, 3}
+	//arr := []int{2, 4, 5, 1, 3}
+	arr := []int{2, 4, 5, 1, 3, 6, 8, 1, 2, 10, 8, 2, 4}
+	//arr := []int{2, 4, 5, 1, 3}
 
 	fmt.Println(BubbleSort(arr))
 }
 
 func BubbleSort(arr []int) []int {
 	// 😤
-
+	for i := 1; i < len(arr); i++ {
+		for j := 1; j < len(arr); j++ {
+			if arr[j-1] > arr[j] {
+				work := arr[j]
+				arr[j] = arr[j-1]
+				arr[j-1] = work
+			}
+		}
+	}
 	return arr
 }

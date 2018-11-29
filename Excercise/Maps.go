@@ -2,7 +2,7 @@ package main
 
 import (
 	"strings"
-	//"fmt"
+
 	"golang.org/x/tour/wc"
 )
 
@@ -16,7 +16,6 @@ func WordCount(s string) map[string]int {
 			m[array[i]] = (m[array[i]] + 1)
 		}
 	}
-	//fmt.Print(m)
 	return m
 }
 

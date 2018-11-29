@@ -24,6 +24,8 @@ Appending to a sliceをローカルで実行すると
 a tour of goで実行したときと結果が違った
 
 https://play.golang.org/p/q_QHAO6JI7N
+//errors.go
+https://play.golang.org/p/--1_BMU1xN9
 
 
 ＃やること

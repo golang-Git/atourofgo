@@ -18,12 +18,16 @@ func main() {
 	fmt.Printf(Reverse(str))
 }
 
-func Reverse(str string) string {
+func Reverse(str string) (s string) {
 	// 😤
-	var rev []string
-	for a, b := range str {
-		string[a]
+	var arr [5]string
+	for key, val := range str {
+		arr[key] = string(val)
 	}
 
-	return ""
+	for i := len(arr) - 1; i >= 0; i-- {
+		s += arr[i]
+	}
+
+	return
 }

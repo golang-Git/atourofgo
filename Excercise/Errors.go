@@ -10,17 +10,16 @@ https://play.golang.org/p/--1_BMU1xN9
 
 */
 
-type ErrNegativeSqrt struct {
-	Number float64
-}
+type ErrNegativeSqrt float64
 
 func (e ErrNegativeSqrt) Error() string {
-	return fmt.Sprintf("cannot Sqrt negative number: %v", e.Number)
+	return fmt.Sprintf("cannot Sqrt negative number: %v", uint(e))
 }
 
+//Sqrt is
 func Sqrt(x float64) (float64, error) {
 	if x < 0 {
-		return 0, ErrNegativeSqrt{x}
+		return 0, ErrNegativeSqrt(x)
 	}
 	z := x
 	for i := 0; i < 10; i++ {

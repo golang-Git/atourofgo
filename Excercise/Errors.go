@@ -12,6 +12,8 @@ https://play.golang.org/p/--1_BMU1xN9
 
 type ErrNegativeSqrt float64
 
+//Error()のeをキャストするのはeを単体で呼ぶとErrNegaticeSqrt型なのでErrorメソッドが再帰的に呼ばれてしまうため。
+//⇒Error()メソッドを定義した型の場合は強制的にError()メソッドが呼ばれる(？)
 func (e ErrNegativeSqrt) Error() string {
 	return fmt.Sprintf("cannot Sqrt negative number: %v", uint(e))
 }
